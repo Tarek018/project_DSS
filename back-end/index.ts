@@ -1,8 +1,19 @@
 import express from 'express'
-const app = express()
-const port = 3000
+const bodyParser = require('body-parser');
+require('body-parser-xml')(bodyParser);
 
-app.get('/', (req, res) => {
+
+const app = express()
+app.use(bodyParser.xml())
+
+const port = 3001;
+
+// parse application/xml
+
+
+app.post('/', (req, res) => {
+  console.log(req.body.film);
+  
   res.send('Hello World!')
 })
 
