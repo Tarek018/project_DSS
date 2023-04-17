@@ -5,6 +5,7 @@ import {    Input,
             Heading
     } from "@hope-ui/solid";
 import { OBJtoXML } from "../../functions/all";
+import Axios from "axios";
 import '../styles/login.css';
 
 const login: Component = () => {
@@ -13,10 +14,17 @@ const login: Component = () => {
         pass:''
     })
     
-    function signupp(){
-      
-          let xml=OBJtoXML(logininfo())
-        console.log(xml);
+    async function signupp(){
+          let xml:any=OBJtoXML(logininfo())
+          console.log(xml);
+          await Axios.post('http://127.0.0.1:3001/', xml, {
+            headers: {
+              'Content-Type': 'application/xml',
+            },
+          }).then(()=>{
+            console.log(xml);
+            
+          });
         
     }
     return (
