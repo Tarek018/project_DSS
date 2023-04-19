@@ -15,7 +15,7 @@ const login: Component = () => {
     })
     
     async function signupp(){
-          let xml:any=OBJtoXML(logininfo())
+          let xml:any=OBJtoXML(logininfo());
           console.log(xml);
           await Axios.post('http://127.0.0.1:3001/', xml, {
             headers: {
