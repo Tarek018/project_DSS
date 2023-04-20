@@ -5,11 +5,19 @@ require('body-parser-xml')(bodyParser);
 import cors from "cors";
 const app = express()
 app.use(cors())
+
+// parse application/xml
 app.use(bodyParser.xml())
 
 const port = 3001;
 
-// parse application/xml
+//routes
+const usersRoute = require('./routes/users');
+
+app.use('/',usersRoute);
+
+
+
 
 
 app.post('/', async(req, res) => {

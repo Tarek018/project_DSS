@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <users>
-    
+    <user>
+        <first_name>a</first_name>
+        <last_name>a</last_name>
+        <username>a</username>
+        <password>asas</password>
+      </user>
 </users>

@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.1.0",
     "body-parser": "^1.20.2",
     "body-parser-xml": "^2.0.5",
     "cors": "^2.8.5",
@@ -21,9 +22,11 @@
     "nodemon": "^2.0.22",
     "saxon-js": "^2.5.0",
     "typescript": "^5.0.4",
-    "xml-js": "^1.6.11"
+    "xml-js": "^1.6.11",
+    "xpath": "^0.0.32"
   },
   "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
     "@types/body-parser": "^1.19.2",
     "@types/body-parser-xml": "^2.0.2",
     "@types/cors": "^2.8.13",
