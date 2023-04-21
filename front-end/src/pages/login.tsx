@@ -23,7 +23,6 @@ const login: Component = () => {
             },
           }).then(()=>{
             console.log(xml);
-            
           });
         
     }

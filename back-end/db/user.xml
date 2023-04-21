@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <users>
-    <user>
-        <first_name>a</first_name>
-        <last_name>a</last_name>
-        <username>a</username>
-        <password>asas</password>
-      </user>
+  <user/>
+  <user>
+    <first_name>a</first_name>
+    <last_name>a</last_name>
+    <username>a</username>
+    <password>$2b$10$1NaJWne/SNdPfWGEONSIqe3RqW1kQJEDzo6qG/wwnNn3HESqe8.ca</password>
+  </user>
 </users>

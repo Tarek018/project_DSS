@@ -6,6 +6,7 @@ import {    Input,
         } from "@hope-ui/solid";
 import '../styles/signup.css';
 import { OBJtoXML } from "../../functions/all";
+import  Axios  from 'axios';
 
 const signup: Component = () => {
     const [signinfo,setsigninfo] = createSignal({
@@ -14,9 +15,17 @@ const signup: Component = () => {
         username:'',
         password:''
     });
-    function signupp(){
+    async function signupp(){
         let xml:any=OBJtoXML(signinfo())
-        console.log(xml);
+        await Axios.post('http://127.0.0.1:3001/signup', xml, {
+            headers: {
+              'Content-Type': 'application/xml',
+            },
+          }).then((response)=>{
+            localStorage.setItem('token',response.data.token)
+
+            
+          });
         
     }
     return (
