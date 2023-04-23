@@ -14,7 +14,6 @@ router.use(bodyParser.xml())
 
 import fs from 'fs';
 import xml2js from 'xml2js';
-import uuid from 'uuid';
 
 
 router.post('/signup', async(req, res) =>{
@@ -63,8 +62,7 @@ router.post('/signup', async(req, res) =>{
               let payload:any = {
               "first_name":req.body.user.first_name[0],
               "last_name":req.body.user.last_name[0]
-
-          }
+            }
             let secret_key :any = process.env.ACCES_SECRET_TOKEN;
             let token = jwt.sign(payload,secret_key)            
             res.status(200).json({token:token}); // send the id of the newly added document in the response

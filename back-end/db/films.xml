@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<films>
+  <film>
+    <title>takers</title>
+    <the_screening_date>2023-04-29</the_screening_date>
+    <the_projection_room>1</the_projection_room>
+  </film>
+  <film>
+    <title>takers</title>
+    <the_screening_date>2023-04-29</the_screening_date>
+    <the_projection_room>1</the_projection_room>
+  </film>
+  <film>
+    <title>takers</title>
+    <the_screening_date>2023-04-29</the_screening_date>
+    <the_projection_room>1</the_projection_room>
+  </film>
+  <film>
+    <title>John power</title>
+    <the_screening_date>2023-04-27</the_screening_date>
+    <the_projection_room>34</the_projection_room>
+  </film>
+</films>

@@ -1,0 +1,15 @@
+.hope-breadcrumb__list {
+    display: flex !important;
+    justify-content: space-around !important;
+}
+.hope-breadcrumb  {
+    background-color: aliceblue;
+}
+.hope-breadcrumb__link  {
+    font-size: 23px;
+    font-weight: bold;
+    padding: 30px;
+}
+.hope-breadcrumb__link:hover {
+    background-color: gray;
+}

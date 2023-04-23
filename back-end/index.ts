@@ -13,8 +13,19 @@ const port = 3001;
 
 //routes
 const usersRoute = require('./routes/users');
+const adminRoute = require('./routes/admin');
+const adminRouteid = require('./routes/validate_id');
+
+
+
 
 app.use('/',usersRoute);
+app.use('/',adminRoute);
+app.use('/admin',adminRouteid);
+
+
+
+
 
 
 

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<admins>
+  <admin>
+    <id>12345</id>
+    <password>admin123</password>
+  </admin>
+</admins>
