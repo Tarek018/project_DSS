@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <users>
-  <user/>
   <user>
-    <first_name>a</first_name>
-    <last_name>a</last_name>
-    <username>a</username>
-    <password>$2b$10$1NaJWne/SNdPfWGEONSIqe3RqW1kQJEDzo6qG/wwnNn3HESqe8.ca</password>
+    <first_name>Triki</first_name>
+    <last_name>Aymen</last_name>
+    <username>Nems</username>
+    <password>$2b$10$JJlzvBoP.jt0jWX0KIhLCeGsrW9mhqroDsKvERwN.5Ql0in7gWVeu</password>
+  </user>
+  <user>
+    <first_name>Tarek</first_name>
+    <last_name>Triki</last_name>
+    <username>paress</username>
+    <password>$2b$10$wILOUzy5S6VIO4VlsfeQiOEWk00.HV3QgL15tnaj5/D3KgwqdfLqa</password>
+  </user>
+  <user>
+    <first_name/>
+    <last_name/>
+    <username/>
+    <password>$2b$10$yv8w5HKIflzeYag7psnKN.YvBlUnUzydwJPe.CpHfYZgmWclsZfJO</password>
   </user>
 </users>

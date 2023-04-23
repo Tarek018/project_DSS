@@ -7,22 +7,23 @@ import {    Input,
 import { OBJtoXML } from "../../functions/all";
 import Axios from "axios";
 import '../styles/login.css';
+import { useNavigate } from "solid-app-router";
 
 const login: Component = () => {
+    const navigate = useNavigate()
     const [logininfo,setlogininfo] = createSignal<any>({
         user:'',
         pass:''
     })
     
     async function signupp(){
-          let xml:any=OBJtoXML(logininfo());
-          console.log(xml);
-          await Axios.post('http://127.0.0.1:3001/', xml, {
-            headers: {
-              'Content-Type': 'application/xml',
-            },
-          }).then(()=>{
-            console.log(xml);
+        console.log(logininfo());
+        
+          await Axios.post('http://127.0.0.1:3001/login_user',logininfo())
+          .then((response)=>{
+            localStorage.setItem('token',response.data.token)
+            navigate('/home');
+            
           });
         
     }

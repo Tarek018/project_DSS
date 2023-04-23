@@ -4,9 +4,7 @@ import {
     BreadcrumbItem,
     BreadcrumbLink,
     BreadcrumbSeparator,
-    Button,
     HopeProvider,
-    Input,
     Table,
     TableCaption,
     Thead,
@@ -15,13 +13,13 @@ import {
     Tr,
     Th,
     Td
-  } from "@hope-ui/solid";
+  } from "@hope-ui/solid"
+import { useNavigate } from 'solid-app-router';
+import  Axios  from 'axios';
+import { parseFilms } from "../../functions/all";
 
-import  Axios from 'axios';
-import { parseFilms } from "../../../functions/all";
-import { useNavigate } from "solid-app-router";
 
-const list_film: Component = () => {
+const Home: Component = () => {
     const navigate = useNavigate()
     const [films,setfilms] = createSignal([]) as any
     createEffect(() => {
@@ -32,9 +30,9 @@ const list_film: Component = () => {
             }
             })
         .then((respnse) => {
-            let x=respnse.data
-            x=parseFilms(x)
-            setfilms(x) 
+            let x=respnse.data;
+            x=parseFilms(x);
+            setfilms(x);            
         })
         .catch(()=>{
             navigate('/');
@@ -43,14 +41,16 @@ const list_film: Component = () => {
     return (
         <div>
             <HopeProvider>
-                <Breadcrumb>
-                    <BreadcrumbItem>
-                        <BreadcrumbLink href="/add_film">Add Film</BreadcrumbLink>
-                    </BreadcrumbItem>
-                    <BreadcrumbItem>
-                        <BreadcrumbLink href="/film_list">Film List</BreadcrumbLink>
-                    </BreadcrumbItem>
-                </Breadcrumb>
+            <Breadcrumb>
+                <BreadcrumbItem>
+                    <BreadcrumbLink href="/home">Home</BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbItem>
+                </BreadcrumbItem>
+                <BreadcrumbItem>
+                    <BreadcrumbLink href='/account'>Account</BreadcrumbLink>
+                </BreadcrumbItem>
+            </Breadcrumb>
             </HopeProvider>
             <HopeProvider>
             <Table>
@@ -78,4 +78,4 @@ const list_film: Component = () => {
     )
 }
 
-export default list_film;
+export default Home;

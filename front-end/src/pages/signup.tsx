@@ -7,8 +7,10 @@ import {    Input,
 import '../styles/signup.css';
 import { OBJtoXML } from "../../functions/all";
 import  Axios  from 'axios';
+import { useNavigate } from "solid-app-router";
 
 const signup: Component = () => {
+    const navigate = useNavigate()
     const [signinfo,setsigninfo] = createSignal({
         first_name:'',
         last_name:'',
@@ -23,8 +25,7 @@ const signup: Component = () => {
             },
           }).then((response)=>{
             localStorage.setItem('token',response.data.token)
-
-            
+            navigate('/home');
           });
         
     }
