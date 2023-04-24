@@ -18,4 +18,10 @@
     <username/>
     <password>$2b$10$yv8w5HKIflzeYag7psnKN.YvBlUnUzydwJPe.CpHfYZgmWclsZfJO</password>
   </user>
+  <user>
+    <first_name>a</first_name>
+    <last_name>a</last_name>
+    <username>a</username>
+    <password>$2b$10$HbXmcBooczIdPYhTHaGYr.dheWeballXsu5Z0WYdIDe1ruG/0B5Ra</password>
+  </user>
 </users>

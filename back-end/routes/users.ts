@@ -162,14 +162,14 @@ router.post('/subscription',async (req, res) => {
 
   
     // Read the existing JSON object from the file
-const data = JSON.parse(fs.readFileSync('file.json').toString());
+const data = JSON.parse(fs.readFileSync('./db/sub.json').toString());
 
 if (Array.isArray(data.sub)) {
   // Add the new object to the `sub` property of the existing data
   data.sub.push(req.body);
 
   // Write the updated data back to the file
-  fs.writeFileSync('file.json', JSON.stringify(data));
+  fs.writeFileSync('./db/sub.json', JSON.stringify(data));
 } else {
   console.error('Error: The `sub` property is not an array');
 }
