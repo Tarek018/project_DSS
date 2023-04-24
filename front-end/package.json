@@ -6,10 +6,12 @@
     "start": "vite",
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "run-build": "rimraf dist && cross-env DEBUG=vite-plugin-pwa:* BASE_URL=/ SOURCE_MAP=true vite build",
+    "serve": "serve dist"
   },
   "license": "MIT",
   "devDependencies": {
+    "@types/node": "^18.16.0",
     "@types/uuid": "^9.0.1",
     "typescript": "^4.9.5",
     "vite": "^4.1.1",
@@ -17,13 +19,23 @@
   },
   "dependencies": {
     "@hope-ui/solid": "^0.6.7",
+    "@rollup/plugin-replace": "^5.0.2",
     "@stitches/core": "^1.2.8",
     "axios": "^1.3.5",
     "fast-xml-parser": "^4.2.0",
+    "rimraf": "^4.4.1",
     "solid-app-router": "^0.4.2",
     "solid-js": "^1.6.10",
     "solid-transition-group": "^0.2.2",
+    "typescript": "^4.9.5",
     "uuid": "^9.0.0",
+    "vite": "^4.1.1",
+    "vite-plugin-pwa": "^0.14.6",
+    "vite-plugin-solid": "^2.5.0",
+    "workbox-core": "^6.5.4",
+    "workbox-precaching": "^6.5.4",
+    "workbox-routing": "^6.5.4",
+    "workbox-window": "^6.5.4",
     "xml-js": "^1.6.11",
     "xmlbuilder": "^15.1.1"
   }
