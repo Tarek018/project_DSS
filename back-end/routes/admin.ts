@@ -1,6 +1,8 @@
 import express from 'express';
 const router = express.Router();
 import jwt from "jsonwebtoken";
+import webpush from 'web-push';
+
 
 
 const bodyParser = require('body-parser');
@@ -85,6 +87,35 @@ router.post('/add_film',async (req, res) => {
        });
      });
    });
+
+   // Read the XML file
+const xmlData = fs.readFileSync('./db/subscription.xml', 'utf-8');
+
+// Parse the XML data
+xml2js.parseString(xmlData, (err, result) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+
+  // Extract the subscription nodes
+  const subscriptions = result.subscriptions.subscription;
+  webpush.setVapidDetails(
+    'mailto:tarek22042002triki@gmail.com',
+    'BCr32pvQucsO1jY9Po4o_xQ3I6v_VcPYFwswJnO_xgLvgH0M8kW25wviJInf5D-RJR6V4QnOomdoEsLXdX90BNE',
+    'fyYzNvyoXu1xrrpHhDHd4AtbsF-R-IcquIVIqvczNdM'
+  )
+  //The notification content
+  const payload = JSON.stringify({ title: 'in the date '+req.body.film.date[0]+' there is a movie in room '+req.body.film.room[0]+' under the title of'+req.body.film.title[0] });
+
+  // Iterate over the subscriptions and send a push notification to each one
+  for (const subscription of subscriptions) {
+    webpush.sendNotification(subscription,payload)
+      .then(() => console.log('Push notification sent successfully'))
+      .catch((err) => console.error('Error sending push notification:', err));
+  }
+});
+   
 })
 
 router.get('/get_all_film' ,verifyToken,(req, res) => {

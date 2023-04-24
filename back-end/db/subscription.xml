@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<subscriptions>
+  <subscription>
+    <endpoint>https://fcm.googleapis.com/fcm/send/c-UwzB4vndY:APA91bGMK4-GCevLFhM5Fa4KL6fgG4ViFP4iheMF7SllLqmlnD5uohQO8Xk4LOjNKBJ96bfKnvZ8rhWpxRkj04VQwv8fZTLs9FTkwWIsnfsquFahWYKj5xl6VUf_DYqCQENNeufLPLGE</endpoint>
+    <expirationTime/>
+    <keys>
+      <p256dh>BHPMukrhccRcVuaI45S019e-0Cba1ZjNswllxbZ5nTRK1zpSRLn-ZN3Bt1zBoKkNvUaZ-auigy6gwqssJQ_JH2Y</p256dh>
+      <auth>xbqxdMw3rSZ-9bsJHVDNew</auth>
+    </keys>
+  </subscription>
+</subscriptions>

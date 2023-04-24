@@ -20,4 +20,44 @@
     <the_screening_date>2023-04-27</the_screening_date>
     <the_projection_room>34</the_projection_room>
   </film>
+  <film>
+    <title>Boyka</title>
+    <the_screening_date>2023-04-29</the_screening_date>
+    <the_projection_room>12</the_projection_room>
+  </film>
+  <film>
+    <title>qwerty</title>
+    <the_screening_date>2023-04-25</the_screening_date>
+    <the_projection_room>13</the_projection_room>
+  </film>
+  <film>
+    <title>az</title>
+    <the_screening_date>2023-05-02</the_screening_date>
+    <the_projection_room>14</the_projection_room>
+  </film>
+  <film>
+    <title>zxc</title>
+    <the_screening_date>2023-04-27</the_screening_date>
+    <the_projection_room>15</the_projection_room>
+  </film>
+  <film>
+    <title>qwqwqw</title>
+    <the_screening_date>2023-04-27</the_screening_date>
+    <the_projection_room>1</the_projection_room>
+  </film>
+  <film>
+    <title>as</title>
+    <the_screening_date>2023-04-30</the_screening_date>
+    <the_projection_room>14</the_projection_room>
+  </film>
+  <film>
+    <title>s</title>
+    <the_screening_date>2023-04-30</the_screening_date>
+    <the_projection_room>4</the_projection_room>
+  </film>
+  <film>
+    <title>erwqre</title>
+    <the_screening_date>2023-05-06</the_screening_date>
+    <the_projection_room>1312</the_projection_room>
+  </film>
 </films>
