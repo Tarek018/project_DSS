@@ -80,4 +80,19 @@
     <the_screening_date>2023-04-27</the_screening_date>
     <the_projection_room>1221</the_projection_room>
   </film>
+  <film>
+    <title>qwqw</title>
+    <the_screening_date>2023-05-02</the_screening_date>
+    <the_projection_room>12</the_projection_room>
+  </film>
+  <film>
+    <title>zzaza cherif</title>
+    <the_screening_date>2023-04-29</the_screening_date>
+    <the_projection_room>1</the_projection_room>
+  </film>
+  <film>
+    <title>boulal</title>
+    <the_screening_date>2023-04-30</the_screening_date>
+    <the_projection_room>14</the_projection_room>
+  </film>
 </films>

@@ -112,31 +112,21 @@ router.post('/update_account', verifyToken ,(req:any, res) =>{
   fs.readFile('./db/user.xml', function(err, data) {
     parser.parseString(data, async function(err, result) {
       const users = result.users.user;
-      
       const matchingUser = users.find((user:any) => {
         return user.first_name[0] === req.user.first_name && user.last_name[0] === req.user.last_name && user.username[0] === req.user.username;
-      });
-  
-      console.log(req.body);
-      
+      });      
         matchingUser.first_name[0] = req.body.first_name;
         matchingUser.last_name[0] = req.body.last_name;
         matchingUser.username[0] = req.body.username;
         const saltRounds =  10;
         const myPlaintextPassword :any = await req.body.nv_password;
-    
-        // Génère le hash du mot de passe
         bcrypt.hash(myPlaintextPassword, saltRounds, (err, hash) => {
           if (err) {
             console.error(err);
             return;}
-            
             matchingUser.password[0] = hash;
-            
-            
             const builder = new xml2js.Builder();
             const updatedXml = builder.buildObject(result);
-
             fs.writeFile('./db/user.xml', updatedXml, function(err) {
               if (err) throw err;
               let payload:any = {
@@ -162,11 +152,11 @@ router.post('/subscription',async (req, res) => {
 
   
     // Read the existing JSON object from the file
-const data = JSON.parse(fs.readFileSync('./db/sub.json').toString());
+const data = await JSON.parse(fs.readFileSync('./db/sub.json').toString());
 
 if (Array.isArray(data.sub)) {
   // Add the new object to the `sub` property of the existing data
-  data.sub.push(req.body);
+  await data.sub.push(req.body);
 
   // Write the updated data back to the file
   fs.writeFileSync('./db/sub.json', JSON.stringify(data));

@@ -59,7 +59,6 @@ router.post('/add_film',async (req, res) => {
        console.log(err);
        return;
      }
-   
      // convert XML data to JSON object
      xml2js.parseString(data, (err, result) => {
        if (err) {
@@ -72,18 +71,15 @@ router.post('/add_film',async (req, res) => {
          the_screening_date: req.body.film.date[0],
          the_projection_room: req.body.film.room[0],
        });
-   
        // convert JSON object back to XML data
        const builder = new xml2js.Builder();
        const xml = builder.buildObject(result);
-   
        // write the updated XML data to file
        fs.writeFile('./db/films.xml', xml, (err) => {
          if (err) {
            console.log(err);
            return;
          }
-         
        });
      });
    });

@@ -68,16 +68,18 @@ const Home: Component = () => {
             applicationServerKey: 'BNT_7NIJ3VRJv0-QvHceJMfNQYarwH7o3kPF4KNOzK4ODpIxij99fYOx7tmz97jYdttGGWAhH3S9ie5F0Pbq3kM'
           })
         console.log(subscription);
-        Axios.post('http://127.0.0.1:3001/subscription',subscription)
+        //await Axios.post('http://127.0.0.1:3001/subscription',subscription)
         //showLocalNotification('This is title', 'this is the message', swRegistration);
         let token :any =localStorage.getItem('token');        
-        Axios.get('http://127.0.0.1:3001/get_all_film',{
+        await Axios.get('http://127.0.0.1:3001/get_all_film',{
             headers: {
                 'Authorization': `Bearer ${token}`,
             }
             })
         .then((respnse) => {
             let x=respnse.data;
+            console.log(respnse.data);
+            
             x=parseFilms(x);
             setfilms(x);            
         })

@@ -24,4 +24,10 @@
     <username>a</username>
     <password>$2b$10$HbXmcBooczIdPYhTHaGYr.dheWeballXsu5Z0WYdIDe1ruG/0B5Ra</password>
   </user>
+  <user>
+    <first_name>Mouici</first_name>
+    <last_name>Adelkhalek</last_name>
+    <username>zaza</username>
+    <password>$2b$10$vr9aDlzo2Z4ek/AE9k.vUOWiCLiNQ8lPPCezwy0TQzWmcbc5YY8M.</password>
+  </user>
 </users>
