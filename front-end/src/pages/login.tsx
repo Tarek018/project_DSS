@@ -37,7 +37,7 @@ const login: Component = () => {
                     <Input placeholder="Password" size="lg" type='password' onchange={(e:any)=>{
                     setlogininfo({...logininfo(),pass:e.target.value})                    
                 }}/><br /><br />
-                    <Button class='btn-signup' onClick={signupp}>Signup</Button><br /><br />
+                    <Button class='btn-signup' onClick={signupp}>Login</Button><br /><br />
                     <p>or <a href="/signup">signup</a></p>
             </HopeProvider>
         </div>

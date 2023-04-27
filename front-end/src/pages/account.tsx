@@ -87,7 +87,7 @@ const account: Component = () => {
                     <Input htmlSize={35} width="auto" placeholder='confirmed password' type='password' onChange={(e:any)=>{
                         setaccountt({...accountt(),nv_password:e.target.value})
                     }}/>
-                    <Button style='float:right;' onClick={update}>Button</Button>
+                    <Button style='float:right;' onClick={update}>Update</Button>
                 </div>
             </HopeProvider>
         </div>
