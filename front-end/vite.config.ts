@@ -397,6 +397,9 @@ export default defineConfig({
     sourcemap: process.env.SOURCE_MAP === 'true',
     target: 'esnext',
     polyfillDynamicImport: false,
+    server: {
+      port: 8000,
+    },
   },
   plugins: [
     solidPlugin(),

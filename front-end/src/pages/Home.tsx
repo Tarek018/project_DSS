@@ -12,7 +12,8 @@ import {
     Tfoot,
     Tr,
     Th,
-    Td
+    Td,
+    Input
   } from "@hope-ui/solid"
 import { useNavigate } from 'solid-app-router';
 import  Axios  from 'axios';
@@ -58,7 +59,9 @@ const showLocalNotification = (title:any, body:any, swRegistration:any) => {
 
 const Home: Component = () => {
     const navigate = useNavigate()
-    const [films,setfilms] = createSignal([]) as any
+    const [films,setfilms] = createSignal([]) as any;
+    const [searchText, setSearchText] = createSignal('');
+
     createEffect(async () => {
         check();
         const swRegistration = await registerServiceWorker();
@@ -87,6 +90,25 @@ const Home: Component = () => {
             navigate('/');
         })
     })
+    function myFunction() {
+        var input:any, filter:any, table:any, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td")[0];
+          if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+            } else {
+              tr[i].style.display = "none";
+            }
+          }       
+        }
+      }
+
     return (
         <div>
             <HopeProvider>
@@ -102,8 +124,10 @@ const Home: Component = () => {
             </Breadcrumb>
             </HopeProvider>
             <HopeProvider>
-            <Table>
-                <Thead>
+            <Input placeholder="search by title" id="myInput" onKeyUp={myFunction} size="lg" />
+
+            <Table id="myTable">
+                <Thead class='header'>
                     <Tr>
                     <Th>Title</Th>
                     <Th>Date</Th>
