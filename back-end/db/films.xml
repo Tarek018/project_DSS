@@ -25,7 +25,6 @@
     <the_screening_date>2023-05-01</the_screening_date>
     <the_projection_room>12</the_projection_room>
   </film>
-  
   <film>
     <title>Triple frontière</title>
     <the_screening_date>2023-05-02</the_screening_date>
@@ -39,6 +38,26 @@
   <film>
     <title>Bad Boys</title>
     <the_screening_date>2023-05-15</the_screening_date>
+    <the_projection_room>1</the_projection_room>
+  </film>
+  <film>
+    <title>12</title>
+    <the_screening_date>2023-05-20</the_screening_date>
+    <the_projection_room>0</the_projection_room>
+  </film>
+  <film>
+    <title>12</title>
+    <the_screening_date>2023-05-19</the_screening_date>
+    <the_projection_room>34</the_projection_room>
+  </film>
+  <film>
+    <title>zaza</title>
+    <the_screening_date>2023-05-19</the_screening_date>
+    <the_projection_room>1</the_projection_room>
+  </film>
+  <film>
+    <title>as</title>
+    <the_screening_date>2023-05-19</the_screening_date>
     <the_projection_room>1</the_projection_room>
   </film>
 </films>
