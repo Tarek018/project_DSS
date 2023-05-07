@@ -44,20 +44,22 @@ Follow the following commands:
 
 2-Download the repo to your computer and open the cmd file in this
 
-2-1- npm install or pnpm install
+1-1- cd front-end
 
-2-2-npm run dev or pnpm run dev
+2-2- npm install or pnpm install
 
-- Note:
+2-3-npm run dev or pnpm run dev
+
 To launch the server (back-end)
 Follow the following commands:
 
-1 - Node.js must be installed on your computer
 
-2-Download the repo to your computer and open the cmd file in this
+3-Download the repo to your computer and open the cmd file in this
 
-2-1- npm install or pnpm install
+3-1- cd back-end
 
-2-2-npm start or pnpm start
+3-2- npm install or pnpm install
+
+3-3-npm start or pnpm start
 
  
