@@ -33,4 +33,22 @@ XQuery to develop a real-world web app that displays data in a proper formatting
 and eye-friendly manner.
 
 Good luck!
+
+
+- Note:
+To launch the client (front-end)
+Follow the following commands:
+1 - Node.js must be installed on your computer
+2-Download the repo to your computer and open the cmd file in this
+2-1- npm install or pnpm install
+2-2-npm run dev or pnpm run dev
+
+- Note:
+To launch the server (back-end)
+Follow the following commands:
+1 - Node.js must be installed on your computer
+2-Download the repo to your computer and open the cmd file in this
+2-1- npm install or pnpm install
+2-2-npm start or pnpm start
+
  
